@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="it's a website!">
+    <meta name="author" content="R. Linehan">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>R. Linehan</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <a class="navbar-brand" href="./index.html">R. Linehan</a>
+    </nav>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <h2>Code</h2>
+
+          <p>
+          My GitHub account can be found at <a
+            href="https://github.com/rlinehan">github.com/rlinehan</a>.
+          </p>
+
+          <p>
+          I'm fortunate that some of my past work has been <strong>open
+            source</strong>. Below I have highlighted some of the open source
+          contributions that I feel illustrate my skills.
+          </p>
+
+          <hr>
+
+          <h4>Languages</h4>
+
+          <p>
+          I've worked in <a
+            href="https://github.com/puppetlabs/trapperkeeper-status/pull/2">Clojure</a>,
+          <a href="https://github.com/puppetlabs/puppet/pull/3464">Ruby</a>,
+          <a
+            href="https://github.com/puppetlabs/puppetserver/pull/699">Java</a>,
+          <a href="https://github.com/flot/flot/pull/963">Javascript</a>,
+          Python, Puppet, Bash, and more. I am not dogmatic about my
+          programming language choice, and I am good at picking up new
+          languages.
+          </p>
+
+
+          <hr>
+
+          <h4>Communication</h4>
+          <p>
+          Writing code is never a solo activity;
+          communication is one of the
+          most important parts of working as a software developer.
+          </p>
+
+          <p>
+          One example of my communication skills is <a
+            href="https://github.com/puppetlabs/clj-http-client/pull/52">this PR,
+            of a metrics API for tracking requests made by an HTTP client</a>.
+          </p>
+
+          <p>
+          <strong>Designing the API</strong> for this feature involved a lot
+          of collaboration with my teammates, and this PR was the second
+          iteration of our design. After I began implementing the first API
+          design, we realized that there were more requirements and that there
+          would need to be both a Java API and a Clojure API. The commentary
+          on this PR shows our communication to resolve the additional
+          requirements and agree on a reasonable API for this feature.
+          </p>
+
+          <p>
+          (I also believe very strongly in the importance of thorough
+          <strong>testing</strong>. I think this is evident in <a
+            href="https://github.com/puppetlabs/clj-http-client/pull/52/files#diff-e1299b154e662c56432912e2b3860006">the
+            tests added</a> for this feature).
+          </p>
+
+          <hr>
+
+          <h4>Understandable code</h4>
+
+          <p>
+          Being a member of a team means writing maintainable code that others
+          can follow. When I review a pull request, I don't want to be
+          surprised by anything, so I try to ensure the code I write meets the
+          same standard. The <strong>version history</strong> should be broken
+          up into distinct commits with <strong>commit messages</strong>
+          describing their purpose. There should be <strong>comments</strong>
+          for anything that is unexpected or confusing. It should be possible
+          to follow the <strong>tests</strong>. The
+          <strong>documentation</strong> should include how to run the code
+          and the tests.
+          </p>
+
+          <p>
+          <a
+            href="https://github.com/puppetlabs/puppetdb/pull/2179">This
+            PR</a>, which integrates a feature I was working on with a
+          codebase I didn't often contribute to, shows how I follow
+          these principles.
+          </p>
+
+          <hr>
+
+          <h4>Code review</h4>
+
+          <p>
+          I believe that code review is useful not just for
+          ensuring good <strong>code quality</strong> and catching bugs before they make it to
+          production, but also for <strong>knowledge
+            transfer</strong> and
+          ensuring team ownership of a codebase.
+          </p>
+
+          <p>
+          One example of this is <a
+            href="https://github.com/puppetlabs/puppetserver/pull/944">a pull
+            request I reviewed</a> which fixed a bug in some caching logic in the
+          server.
+          </p>
+
+          <p>
+          I was not familiar with the feature this was fixing or with this
+          section of the codebase, but by
+          reviewing it and ensuring that the tests were understandable
+          (especially to someone unfamiliar with the code), I was later able
+          to go back and work on this code myself.
+          </p>
+
+          <hr>
+
+          <h4>Code reuse</h4>
+
+          <p>
+          One of the projects I worked on as a member of the Puppet Server
+          team at Puppet was separating out a Clojure library used to manage
+          pools of JRuby instances.
+          </p>
+
+          <p>
+          We knew that other teams were starting to look into using JRuby, and
+          we wanted them to be able to reuse our pooling
+          functionality. By separating out the most complex code into its own
+          <strong>library</strong>, we were able to refactor it to make it
+          more understandable, better tested, and with a clearer API.
+          </p>
+
+          <p>
+          In <strong>refactoring</strong> this code to separate the library
+          out, we made sure to maintain the git history, because it held a lot
+          of important context for past decisions. We <a
+            href="https://github.com/puppetlabs/jruby-utils/pull/7">added
+            clearer interfaces</a> so that other users could easily hook in
+          functions when creating and destroying JRuby instances. We <a
+            href="https://github.com/puppetlabs/jruby-utils/pull/13">made a
+            clear division between what was public API and what was
+            private</a> and we <a
+            href="https://github.com/puppetlabs/jruby-utils/pull/15">separated
+            the namespaces out</a> so that this distinction was plain.
+          </p>
+
+          <p>
+          We also were able to simplify the tests significantly. When this
+          code had been part of a larger application, the tests had to do a
+          lot of mocking and were full of race conditions. We were able to
+          clean up these tests to make them more reliable and more
+          understandable, and in doing so we <strong>decreased the test
+            time</strong> of the application by 25%.
+          </p>
+
+          <p>
+          I think we succeeded in building a library that provided a reusable
+          interface to a very complicated system of lifecycle decisions and
+          concurrency problems.
+          </p>
+
+      </div>
+
+      <!-- FOOTER -->
+      <!--
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+      -->
+
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- comment all this out
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    -->
+  </body>
+</html>
